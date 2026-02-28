@@ -523,12 +523,12 @@ jobs:
       - name: Enable ath9k_htc driver
         run: |
           cd kernel_workspace/common
-          echo "CONFIG_ATH9K_HTC=m" >> arch/arm64/configs/gki_defconfig
-          echo "CONFIG_ATH9K_HW=m" >> arch/arm64/configs/gki_defconfig
-          echo "CONFIG_ATH9K_COMMON=m" >> arch/arm64/configs/gki_defconfig
-          echo "CONFIG_ATH_COMMON=m" >> arch/arm64/configs/gki_defconfig
-          echo "CONFIG_MAC80211=m" >> arch/arm64/configs/gki_defconfig
-          echo "CONFIG_CFG80211=m" >> arch/arm64/configs/gki_defconfig
+          echo "CONFIG_ATH9K_HTC=y" >> arch/arm64/configs/gki_defconfig
+          echo "CONFIG_ATH9K_HW=y" >> arch/arm64/configs/gki_defconfig
+          echo "CONFIG_ATH9K_COMMON=y" >> arch/arm64/configs/gki_defconfig
+          echo "CONFIG_ATH_COMMON=y" >> arch/arm64/configs/gki_defconfig
+          echo "CONFIG_MAC80211=y" >> arch/arm64/configs/gki_defconfig
+          echo "CONFIG_CFG80211=y" >> arch/arm64/configs/gki_defconfig
 
       - name: 构建内核
         run: |
